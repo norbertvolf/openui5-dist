@@ -1,0 +1,15 @@
+{
+  "name": "openui5-dist",
+  "version": "1.48.6",
+  "description": "Just OpenUI5 package to use it over npm",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "node index.js"
+  },
+  "author": "Norbert Volf",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "simple-git": "^1.75.0"
+  }
+}

@@ -7,9 +7,22 @@
     "prepare": "node index.js"
   },
   "author": "Norbert Volf",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "dependencies": {
     "adm-zip": "^0.4.7",
     "simple-git": "^1.75.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norbertvolf/openui5-dist.git"
+  },
+  "keywords": [
+    "openui5",
+    "npm"
+  ],
+  "bugs": {
+    "url": "https://github.com/norbertvolf/openui5-dist/issues"
+  },
+  "homepage": "https://github.com/norbertvolf/openui5-dist#readme"
 }

@@ -1,6 +1,6 @@
 {
   "name": "openui5-dist",
-  "version": "1.48.6",
+  "version": "1.50.7",
   "description": "Just OpenUI5 package to use it over npm",
   "main": "index.js",
   "scripts": {
@@ -8,11 +8,11 @@
   },
   "author": "Norbert Volf",
   "license": "Apache-2.0",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "adm-zip": "^0.4.7",
     "simple-git": "^1.75.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/norbertvolf/openui5-dist.git"

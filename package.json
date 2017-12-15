@@ -1,7 +1,7 @@
 {
   "name": "openui5-dist",
   "version": "1.50.7",
-  "description": "Just OpenUI5 package to use it over npm",
+  "description": "The NPM package contains the OpenUI5 framework and the script for building the NPM package. This package does not modify openui5 content, it just packages it for distribution via NPM.",
   "main": "index.js",
   "scripts": {
     "prepare": "node index.js"

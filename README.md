@@ -1,15 +1,15 @@
 # openui5-dist
 
-The package contains OpenUI5 framework packaged for NPM and the
-script for the building the [OpenUI5](http://openui5.org/) framework for
-NPM package. The openui5-dist does not touch openui5 content. Just
-package it for distribution via NPM.
+The NPM package contains OpenUI5 framework packaged for NPM. The repository
+contains only script for building the *openui5-dist* NPM package.
+The openui5-dist does not touch openui5 content. Just package it for
+distribution via NPM.
 
 OpenUI5 is open-source part of SAPUI5 framework which is used
-to build SAP Fiory application. You can freely use [OpenUI5](http://openui5.org/) framework
-in your projects.
+to build SAP Fiory application. You can freely use
+[OpenUI5](http://openui5.org/) framework in your projects.
 
-## Use it  for building OpenUI5 application
+## Use *openui5-dist* NPM packageit to build OpenUI5 application
 
 Install *openui5-dist* package in your project
 

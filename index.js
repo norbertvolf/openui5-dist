@@ -112,7 +112,7 @@ function buildOpenUI5 () {
 	console.log(`Build OpenUI5 ${config.version}.`);
 	var executor = function(resolve, reject) {
 		child = exec(
-			'grunt build', {
+			'/usr/local/bin/grunt build', {
 				cwd : WORKING_DIRECTORY
 			},
 			function (err, stdout, stderr) {
@@ -138,7 +138,7 @@ function compressOpenUI5 () {
 	console.log(`Compress OpenUI5 ${config.version}.`);
 	var executor = function(resolve, reject) {
 		child = exec(
-			'grunt compress', {
+			'/usr/local/bin/grunt compress', {
 				cwd : WORKING_DIRECTORY
 			},
 			function (err, stdout, stderr) {

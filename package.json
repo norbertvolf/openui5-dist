@@ -1,28 +1,28 @@
 {
-  "name": "openui5-dist",
-  "version": "1.50.7",
-  "description": "Just OpenUI5 package to use it over npm",
-  "main": "index.js",
-  "scripts": {
-    "prepare": "node index.js"
-  },
-  "author": "Norbert Volf",
-  "license": "Apache-2.0",
-  "dependencies": {},
-  "devDependencies": {
-    "adm-zip": "^0.4.7",
-    "simple-git": "^1.75.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/norbertvolf/openui5-dist.git"
-  },
-  "keywords": [
-    "openui5",
-    "npm"
-  ],
-  "bugs": {
-    "url": "https://github.com/norbertvolf/openui5-dist/issues"
-  },
-  "homepage": "https://github.com/norbertvolf/openui5-dist#readme"
+   "description" : "Just OpenUI5 package to use it over npm",
+   "dependencies" : {},
+   "devDependencies" : {
+      "simple-git" : "^1.75.0",
+      "adm-zip" : "^0.4.7"
+   },
+   "name" : "openui5-dist",
+   "version" : "1.60.2",
+   "main" : "index.js",
+   "homepage" : "https://github.com/norbertvolf/openui5-dist#readme",
+   "license" : "Apache-2.0",
+   "scripts" : {
+      "prepare" : "node index.js"
+   },
+   "keywords" : [
+      "openui5",
+      "npm"
+   ],
+   "repository" : {
+      "url" : "git+https://github.com/norbertvolf/openui5-dist.git",
+      "type" : "git"
+   },
+   "bugs" : {
+      "url" : "https://github.com/norbertvolf/openui5-dist/issues"
+   },
+   "author" : "Norbert Volf"
 }

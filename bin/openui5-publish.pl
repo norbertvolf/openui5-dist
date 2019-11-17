@@ -185,6 +185,7 @@ foreach (@$foundVersionsToPublish) {
 	system "npm publish $PATH " . ($_->{beta} ? " --tag beta" : "");
 	if ( ! $_->{beta}) {
 		updateVersionInPackageFile("$latestVersion");
+		sleep 10;
 		system "npm dist-tag add  openui5-dist\@$latestVersion latest;";
 	}
 	say "\n";

@@ -1,17 +1,24 @@
 {
   "name": "openui5-dist",
-  "version": "1.50.7",
+  "version": "1.72.1",
   "description": "The NPM package contains the OpenUI5 framework and the script for building the NPM package. This package does not modify openui5 content, it just packages it for distribution via NPM.",
-  "main": "index.js",
-  "scripts": {
-    "prepare": "node index.js"
-  },
+  "main": "bin/publish.js",
+  "scripts": {},
   "author": "Norbert Volf",
   "license": "Apache-2.0",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "adm-zip": "^0.4.13",
+    "jsdom": "^15.2.1",
+    "lodash": "^4.17.15",
+    "npm": "^6.13.0",
+    "request": "^2.88.0",
+    "semver": "^6.3.0",
     "simple-git": "^1.126.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-prettier": "^2.3.0"
   },
   "repository": {
     "type": "git",

@@ -88,5 +88,5 @@ Update version in the package.json by corresponding version of OpenUI5 framework
 run the script for building the OpenUI5 distribution.
 
 ```
-node index.js
+node ./bin/publish.js
 ```

@@ -11,7 +11,7 @@ Promise.all([versions.determineVersionsToInstall(), git.initialize()])
     .then(results => {
         let versionsToInstall = results[0];
         let currentVersion;
-        return _.reduce((promise, version) => {
+        return _.reduce(versionsToInstall, (promise, version) => {
             return promise
                 .then(() => {
                     currentVersion = version;

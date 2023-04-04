@@ -10,13 +10,11 @@ const _ = require("lodash");
 Promise.all([versions.determineVersionsToInstall(), git.initialize()])
     .then(results => {
         let versionsToInstall = results[0];
-        let currentVersion;
         return _.reduce(
             versionsToInstall,
             (promise, version) => {
                 return promise
                     .then(() => {
-                        currentVersion = version;
                         filesystem.changeVersionInPackageJSON(version);
                         return git.changeVersion(version);
                     })
@@ -33,17 +31,15 @@ Promise.all([versions.determineVersionsToInstall(), git.initialize()])
                         return commands.grunt("build");
                     })
                     .then(() => {
-                        console.log("OpenUI5 built.");
-                        return commands.grunt("compress");
-                    })
-                    .then(() => {
-                        console.log("OpenUI5 compressed.");
+                        console.log(`Built OpenUI5 ${version}.`);
                         return filesystem.cleanUpDistDirectory();
                     })
                     .then(() => {
-                        console.log("Dist directory is ready.");
-                        commands.extractResources();
-                        console.log("UI5 distribution files is ready.");
+                        console.log(`Merge OpenUI5 ${version} libraries merged to one distribution.`);
+                        return commands.mergeBuiltLibraries();
+                    })
+                    .then(() => {
+                        console.log(`OpenUI5 ${version} is ready.`);
                         return npm.publishPackage();
                     })
                     .then(() => {
@@ -53,7 +49,7 @@ Promise.all([versions.determineVersionsToInstall(), git.initialize()])
                         return npm.markAsLatestVersion(latestVersion);
                     })
                     .then(() => {
-                        console.log(`UI5 ${currentVersion} is published.`);
+                        console.log(`OpenUI5 ${version} is published.`);
                     });
             },
             Promise.resolve()

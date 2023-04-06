@@ -43,16 +43,19 @@ Promise.all([versions.determineVersionsToInstall(), git.initialize()])
                         return npm.publishPackage();
                     })
                     .then(() => {
-                        return versions.readLatestVersion();
-                    })
-                    .then(latestVersion => {
-                        return npm.markAsLatestVersion(latestVersion);
-                    })
-                    .then(() => {
                         console.log(`OpenUI5 ${version} is published.`);
                     });
             },
             Promise.resolve()
         );
+    })
+    .then(() => versions.readLatestVersion())
+    .then(latestVersion => {
+        let promise = Promise.resolve();
+        if (latestVersion) {
+            console.log(`Mark latest version to ${latestVersion}`);
+            promise = npm.markAsLatestVersion(latestVersion);
+        }
+        return promise;
     })
     .catch(console.error);

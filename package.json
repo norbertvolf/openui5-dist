@@ -3,7 +3,13 @@
   "version": "1.112.0",
   "description": "The NPM package contains the OpenUI5 framework and the script for building the NPM package. This package does not modify openui5 content, it just packages it for distribution via NPM.",
   "main": "bin/publish.js",
-  "scripts": {},
+  "scripts": {
+    "validate:prettier": "prettier --check lib/ .eslintrc bin/",
+    "validate:eslint": "eslint lib bin",
+    "validate": "npm run validate:eslint && npm run validate:prettier ",
+    "watch": "nodemon --watch bin --watch lib -e js -x \"npm run validate\"",
+	"prettier": "prettier --write  lib/ .eslintrc bin/"
+  },
   "author": "Norbert Volf",
   "license": "Apache-2.0",
   "dependencies": {
@@ -15,9 +21,10 @@
     "simple-git": "^3.3.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
-    "gulp-prettier": "^2.3.0"
+    "eslint": "^8.37.0",
+    "eslint-plugin-node": "^11.1.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7"
   },
   "repository": {
     "type": "git",
@@ -30,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/norbertvolf/openui5-dist/issues"
   },
-  "homepage": "https://github.com/norbertvolf/openui5-dist#readme"
+  "homepage": "https://github.com/norbertvolf/openui5-dist#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  }
 }
